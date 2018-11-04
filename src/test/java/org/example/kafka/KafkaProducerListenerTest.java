@@ -1,13 +1,7 @@
 package org.example.kafka;
 
 import io.micronaut.configuration.kafka.config.AbstractKafkaConfiguration;
-import io.micronaut.configuration.kafka.embedded.KafkaEmbedded;
 import io.micronaut.context.ApplicationContext;
-import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

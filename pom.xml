@@ -78,7 +78,7 @@
             <version>2.0.0</version>
             <classifier>test</classifier>
         </dependency>
-        
+
         <!-- Test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
