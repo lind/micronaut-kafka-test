@@ -1,7 +1,6 @@
 package org.example.t
 
 import io.micronaut.configuration.kafka.annotation.*
-import org.example.kafka.Holder
 import javax.inject.Inject
 
 @KafkaListener(offsetReset = OffsetReset.EARLIEST, offsetStrategy = OffsetStrategy.DISABLED, groupId = "test-listener")

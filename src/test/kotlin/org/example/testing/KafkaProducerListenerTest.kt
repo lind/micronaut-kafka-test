@@ -5,11 +5,7 @@ import io.micronaut.configuration.kafka.embedded.KafkaEmbedded
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.client.HttpClient
 import io.micronaut.runtime.server.EmbeddedServer
-import org.example.kafka.Holder
-import org.example.kafka.TestListener
-import org.example.kafka.TestProducer
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import java.io.IOException
 import java.net.InetSocketAddress
