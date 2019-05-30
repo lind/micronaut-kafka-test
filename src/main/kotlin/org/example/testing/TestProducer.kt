@@ -1,4 +1,4 @@
-package org.example.t
+package org.example.testing
 
 import io.micronaut.configuration.kafka.annotation.KafkaClient
 import io.micronaut.configuration.kafka.annotation.KafkaKey

@@ -1,4 +1,4 @@
-package org.example.t
+package org.example.testing
 
 import io.micronaut.runtime.Micronaut
 

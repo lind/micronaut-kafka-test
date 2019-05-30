@@ -1,4 +1,4 @@
-package org.example.t
+package org.example.testing
 
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller

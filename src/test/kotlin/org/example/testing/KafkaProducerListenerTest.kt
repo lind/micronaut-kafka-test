@@ -1,4 +1,4 @@
-package org.example.t
+package org.example.testing
 
 import io.micronaut.configuration.kafka.config.AbstractKafkaConfiguration
 import io.micronaut.configuration.kafka.embedded.KafkaEmbedded
@@ -29,8 +29,8 @@ class KafkaProducerListenerTest {
         ApplicationContext.run(config).use { ctx ->
             val holder = ctx.getBean(Holder::class.java)
 
-            val embeddedServer = ctx.getBean(EmbeddedServer::class.java)
-            val client = HttpClient.create(embeddedServer.url)
+//            val embeddedServer = ctx.getBean(EmbeddedServer::class.java)
+  //          val client = HttpClient.create(embeddedServer.url)
 
             println("Kotlin Kafka up? " + if (pingHost("localhost", 9092, 1000)) "Yes Kafka is up" else "No!")
 
