@@ -21,6 +21,11 @@
         </Logger>
     </Loggers>
     <Loggers>
+        <Logger name="io.micronaut.context.condition" level="trace">
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
+    <Loggers>
         <Logger name="org.apache.kafka" level="info">
             <AppenderRef ref="Console"/>
         </Logger>

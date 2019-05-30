@@ -3,8 +3,6 @@ package org.example.testing
 import io.micronaut.configuration.kafka.config.AbstractKafkaConfiguration
 import io.micronaut.configuration.kafka.embedded.KafkaEmbedded
 import io.micronaut.context.ApplicationContext
-import io.micronaut.http.client.HttpClient
-import io.micronaut.runtime.server.EmbeddedServer
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.io.IOException
@@ -17,7 +15,7 @@ class KafkaProducerListenerTest {
     var config: Map<String, Any> = Collections.unmodifiableMap(object : HashMap<String, Any>() {
         init {
             put(AbstractKafkaConfiguration.EMBEDDED, true)
-            put(AbstractKafkaConfiguration.EMBEDDED_TOPICS, "test_topic")
+//            put(AbstractKafkaConfiguration.EMBEDDED_TOPICS, "test_topic")
         }
     })
     var kafkaEmbedded: KafkaEmbedded? = null
