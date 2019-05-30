@@ -1,13 +1,14 @@
-package org.example.test
+package org.example.pack
 
 import org.junit.jupiter.api.Test
 
-class Testing {
+class NewTest {
 
     @Test
-    fun tesing() {
+    fun testing() {
         println("******************************************")
-        println("Yes!!!")
+        println("One more!!!")
         println("******************************************")
     }
+
 }
