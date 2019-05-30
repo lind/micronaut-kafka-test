@@ -3,6 +3,8 @@ package org.example.kafka;
 import io.micronaut.configuration.kafka.config.AbstractKafkaConfiguration;
 import io.micronaut.configuration.kafka.embedded.KafkaEmbedded;
 import io.micronaut.context.ApplicationContext;
+import io.micronaut.http.client.HttpClient;
+import io.micronaut.runtime.server.EmbeddedServer;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +41,9 @@ public class KafkaProducerListenerTest {
         try (ApplicationContext ctx = ApplicationContext.run(config)) {
             Holder holder = ctx.getBean(Holder.class);
 
+            EmbeddedServer embeddedServer = ctx.getBean(EmbeddedServer.class);
+            HttpClient client = HttpClient.create(embeddedServer.getURL());
+
             System.out.println("Kafka up? " + (pingHost("localhost", 9092, 1000) ? "Yes Kafka is up" : "No!"));
 
             TestListener listener = ctx.getBean(TestListener.class);
@@ -52,6 +57,8 @@ public class KafkaProducerListenerTest {
                 e.printStackTrace();
             }
             assertEquals("The value!!", holder.getMessage());
+
+
         }
     }
 
