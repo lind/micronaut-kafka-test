@@ -9,7 +9,6 @@ public class Application {
 
     public static void main(String[] args) {
 
-        logger.info("Starting Application");
         Micronaut.run(Application.class);
     }
 
