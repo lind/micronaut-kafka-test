@@ -23,12 +23,8 @@ class KafkaProducerListenerTest {
     @Test
     fun testListener() {
 
-
         ApplicationContext.run(config).use { ctx ->
             val holder = ctx.getBean(Holder::class.java)
-
-//            val embeddedServer = ctx.getBean(EmbeddedServer::class.java)
-  //          val client = HttpClient.create(embeddedServer.url)
 
             println("Kotlin Kafka up? " + if (pingHost("localhost", 9092, 1000)) "Yes Kafka is up" else "No!")
 
@@ -38,19 +34,15 @@ class KafkaProducerListenerTest {
             producer.send("key", "The Kotlin value!!")
 
             try {
-                Thread.sleep(4000)
+                Thread.sleep(8000)
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }
-
             assertEquals("The Kotlin value!!", holder.message)
-
-
         }
     }
 
     companion object {
-
 
         fun pingHost(host: String, port: Int, timeout: Int): Boolean {
             try {
@@ -61,7 +53,6 @@ class KafkaProducerListenerTest {
             } catch (e: IOException) {
                 return false // Either timeout or unreachable or failed DNS lookup.
             }
-
         }
     }
 }
