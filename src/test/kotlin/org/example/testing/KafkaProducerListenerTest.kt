@@ -15,7 +15,7 @@ class KafkaProducerListenerTest {
     var config: Map<String, Any> = Collections.unmodifiableMap(object : HashMap<String, Any>() {
         init {
             put(AbstractKafkaConfiguration.EMBEDDED, true)
-//            put(AbstractKafkaConfiguration.EMBEDDED_TOPICS, "test_topic")
+            put("test-listener.group-id", "KafkaProducerListenerTest-group")
         }
     })
     var kafkaEmbedded: KafkaEmbedded? = null
@@ -32,6 +32,7 @@ class KafkaProducerListenerTest {
 
             val producer = ctx.getBean(TestProducer::class.java)
             producer.send("key", "The Kotlin value!!")
+            println("holder id:${holder}")
 
             try {
                 Thread.sleep(8000)

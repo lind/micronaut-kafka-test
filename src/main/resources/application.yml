@@ -1,0 +1,5 @@
+test-listener:
+  group-id: groupid-1
+micronaut:
+  application:
+    name: Micronaut test
